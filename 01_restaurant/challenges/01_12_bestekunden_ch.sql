@@ -4,3 +4,11 @@
 
 -- Geben Sie die Anzahl der Bestellungen, 
 -- den Vornamen, Nachnamen sowie die Email-Adresse an.
+
+SELECT COUNT(Bestellungen.BestellungsID) AS AnzahlBestellungen, Kunden.Vorname, Kunden.Nachname, Kunden.Email 
+  FROM Bestellungen
+  JOIN Kunden ON Bestellungen.KundenID=Kunden.KundenID
+  GROUP BY Bestellungen.KundenID
+  ORDER BY AnzahlBestellungen DESC
+  LIMIT 20;
+
