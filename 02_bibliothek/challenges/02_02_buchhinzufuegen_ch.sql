@@ -11,3 +11,17 @@
 - Autor: Jonathan Swift
 - Jahr: 1729
 - Neue ID: 4899254401 */
+
+INSERT INTO Buecher
+  (Titel, AutorIn, Erscheinungsdatum, Barcode)
+  VALUES (
+    'Dracula', 'Bram Stoker', 1897, 4819277482
+  );
+
+INSERT INTO Buecher
+  (Titel, AutorIn, Erscheinungsdatum, Barcode)
+  VALUES (
+    'Gulliver`s Travels into Several Remote Nations of the World', 'Jonathan Swift', 1729, 4899254401
+  );
+
+SELECT * FROM Buecher WHERE Barcode IN (4819277482, 4899254401);

@@ -11,4 +11,3 @@ SELECT COUNT(Bestellungen.BestellungsID) AS AnzahlBestellungen, Kunden.Vorname, 
   GROUP BY Bestellungen.KundenID
   ORDER BY AnzahlBestellungen DESC
   LIMIT 20;
-
